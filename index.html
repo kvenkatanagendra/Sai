@@ -1,0 +1,51 @@
+DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blinking and Moving Text Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color:pink
+      ;
+            overflow: hidden;
+        }
+
+        .moving-blinking-text {
+            font-size: 24px;
+            color: white;
+            position: absolute;
+            white-space: nowrap;
+            animation: moveLeft 5s infinite linear, blink 1s infinite;
+        }
+
+        @keyframes moveLeft {
+            0% {
+                left: 100%;
+            }
+            100% {
+                left: -100%;
+            }
+        }
+
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="moving-blinking-text"><i>Hai good evening</i> </div>
+   
+    <img src="https://media.giphy.com/media/26tOZ42Mg6pbTUPHW/giphy.gif" alt="Moving GIF" class="moving-blinking-gif">
+
+</body>
+</html>
